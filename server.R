@@ -27,5 +27,5 @@ shinyServer(function(input, output) {
       pref_graph(),
       vertex.labels = ""
     )
-  })
+  }, height = 800)
 })

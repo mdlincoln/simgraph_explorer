@@ -12,5 +12,5 @@ directed <- checkboxInput("directed", "Directed?", value = FALSE)
 fluidPage(
   title = "Aging Graphs",
   inputPanel(nodes, pa.exp, aging.exp, m, directed),
-  mainPanel(graph_plot)
+  mainPanel(graph_plot, width = 12)
 )
