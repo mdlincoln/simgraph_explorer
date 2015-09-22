@@ -18,7 +18,8 @@ shinyServer(function(input, output) {
       m = m(),
       directed = directed())
 
-    V(g)$size <- sqrt(degree(g, normalized = TRUE)) * 50
+    V(g)$weight <- 1
+    g <- simplify(g, edge.attr.comb = (list(weight = "sum")))
     return(g)
   })
 
