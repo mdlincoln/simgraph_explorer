@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
   output$graph_plot <- renderPlot({
     plot(
       pref_graph(),
-      vertex.labels = ""
+      vertex.label = ""
     )
   }, height = 800)
 })
