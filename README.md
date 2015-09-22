@@ -6,7 +6,7 @@ A [Shiny](http://shiny.rstudio.com/) app for exploring the many random graph gen
 To run:
 
 ```r
-shiny::runGitHub("simgraph-explorer", "mdlincoln")
+shiny::runGitHub("simgraph_explorer", "mdlincoln")
 ```
 
 ---
