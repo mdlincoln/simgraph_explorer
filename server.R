@@ -24,10 +24,17 @@ shinyServer(function(input, output) {
     return(g)
   })
 
+  pref_comm <- reactive({
+    walktrap.community(pref_graph())
+  })
+
   output$graph_plot <- renderPlot({
     plot(
+      pref_comm(),
       pref_graph(),
-      vertex.label = ""
+      vertex.label = "",
+      col = "gray",
+      mark.groups = communities(pref_comm())
     )
   }, height = 800)
 })
